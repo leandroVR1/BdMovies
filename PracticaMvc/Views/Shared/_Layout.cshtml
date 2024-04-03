@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PracticaMvc</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PracticaMvc.styles.css" asp-append-version="true" />
+</head>
+<body>
+<ul id="menu">
+<li>@Html.ActionLink("Home", "Index", "Home")</li>
+<li>@Html.ActionLink("Movies", "Index", "Movies")</li>
+<li>@Html.ActionLink("About", "About", "Home")</li>
+</ul>
+<section id="main">
+@RenderBody()
+<p>Copyright W3schools 2012. All Rights Reserved.</p>
+</section>
+</body>
+</html>
