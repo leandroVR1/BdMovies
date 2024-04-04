@@ -17,6 +17,9 @@ namespace PracticaMvc.Models
 
     public class MovieDBContext : DbContext
     {
-        public DbSet<MovieDB> Movies { get; set; }
+        public MovieDBContext(DbContextOptions<MovieDBContext> options) : base(options)
+        {
+        }
+        public DbSet<MovieDB> MovieDBs { get; set; }
     }
 }

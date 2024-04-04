@@ -1,7 +1,12 @@
+using PracticaMvc.Models;
+using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<MovieDBContext>(options =>
+    options.UseMySql(builder.Configuration.GetConnectionString("MySqlConnection"),
+    ServerVersion.Parse("8.0.20-mysql")));
 
 var app = builder.Build();
 
